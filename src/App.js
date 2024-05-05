@@ -4,6 +4,7 @@ import "./App.css";
 import dayjs from "dayjs";
 import DatePicker from'react-date-picker';
 
+
 function App() {
   curDT: new Date().toLocaleString()
   const curr = new Date();
@@ -37,8 +38,12 @@ function App() {
         </div>
         <div className="container">
           <div className="top">
+        
+            <div className="loc"></div>
+         
             <div className="location">
-              <p>{data.name},</p> {data.sys? <p>{data.sys.country}</p>:null}
+             
+              <p>Location {data.name},</p> {data.sys? <p>{data.sys.country}</p>:null}
             </div>
             <div className="temp">
               {data.main ? <h1>{data.main.temp}°C</h1> : null}
@@ -73,7 +78,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }
